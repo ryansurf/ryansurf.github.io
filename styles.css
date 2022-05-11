@@ -56,7 +56,6 @@ body{
     display: inline-block;
     margin: 8px;
     padding: 8px;
-    overflow: scroll;
 }
 
 #hello-section img{
