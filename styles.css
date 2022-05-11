@@ -1,5 +1,5 @@
 body{
-    background-image: url('../images/space4.jpg');
+    background-image: url('images/space4.jpg');
     /*Makes background image dynamic when resizing browser*/
     background-position: center center;
     background-repeat: no-repeat;
