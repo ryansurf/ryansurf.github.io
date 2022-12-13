@@ -76,11 +76,17 @@ body{
     background-color: #0c192c;
     border-radius: 15%;
     color:   #f8f9fa;
+    overflow: hidden;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
-#about-me h1{
-    padding-top: 5%;
-    margin-top: 20%;
+
+#about-me h1{ 
+    margin-top: 5%;
+}
+
+#about-me h2{
+    margin: 1%;
 }
 
 #about-me ul{
@@ -111,7 +117,11 @@ body{
 }
 
 #selfie p{
-    font-size: 2vw;
+    font-size: 1.2vw;
+    color: rgb(73, 72, 72);
+}
+
+#selfie h3{
     color: rgb(73, 72, 72);
 }
 
@@ -123,11 +133,40 @@ body{
     float: left;
 }
 
+#selfie ul{
+    list-style: none;
+}
+
+#selfie ul li{ 
+    display: inline;
+}
+
+
+.button {
+    background-color: #0c192c;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    margin: 1%;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    border-radius: 15%;
+  }
+
+.button:hover {
+    background-color: #2abcf1;
+    color: white;
+  }
+
 #emojis{
     width: 40%;
     height: 60%;
     display: inline-block;
 }
+
 
 
 
