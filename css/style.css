@@ -103,10 +103,11 @@ body{
     margin-top: 8%;
     float: left;
     font-size: 25px;
+    font-size: 1.3vw;
 }
 
 #selfie p{
-    font-size: 30px;
+    font-size: 2vw;
     color: rgb(73, 72, 72);
 }
 
