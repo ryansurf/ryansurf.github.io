@@ -254,10 +254,15 @@ body{
   /* STACK DIVS ON MOBILE */
 @media all and (max-width:800px) 
 {
-    #selfie, #about
+    #about, #selfie
     {
         display: block; 
         float: none; 
-        width: 100%;
+        width: 80%;
     }
+}
+
+
+a:hover{
+    cursor: pointer;
 }
