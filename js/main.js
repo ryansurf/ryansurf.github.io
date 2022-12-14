@@ -39,3 +39,4 @@ function change() {
     // clearInterval(inst); // uncomment this if you want to stop refreshing after one cycle
   }
 }
+
