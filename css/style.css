@@ -249,3 +249,15 @@ body{
 .column2:hover {
     opacity: 0.3;
   }
+
+
+  /* STACK DIVS ON MOBILE */
+@media all and (max-width:800px) 
+{
+    #selfie, #about
+    {
+        display: block; 
+        float: none; 
+        width: 100%;
+    }
+}
