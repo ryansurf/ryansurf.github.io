@@ -1,5 +1,9 @@
 
 /* The CSS universal selector(*), used to select all items in an HTML file */
+html{
+    scroll-behavior: smooth;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
