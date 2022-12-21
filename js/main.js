@@ -26,10 +26,10 @@ function init(){
 init();
 
 // CHANGE TEXT Function
-var text = ["Student", "Programmer", "Surfer", "Fisherman", "Backpacker", "Snowboarder"];
+var text = ["Programmer", "Student", "Programmer", "Surfer", "Programmer", "Fisherman", "Programmer", "Backpacker", "Programmer", "Snowboarder"];
 var counter = 0;
 var elem = document.getElementById("changeText");
-var inst = setInterval(change, 2500);
+var inst = setInterval(change, 1300);
 
 function change() {
   elem.innerHTML = text[counter];
