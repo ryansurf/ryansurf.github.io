@@ -58,17 +58,13 @@ body{
     background-color:  #f8f9fa;;
     color: #0c192c;
     display: flex;
+    overflow: hidden;
 }
 
-#wrapper{
-    width: 100%;
-    min-height: 100%;
-    overflow: hidden;     
-}
 
 #about{
     width: 70%;
-    height: 100%;
+    height: auto;
     background-color: #f8f9fa;
     float: left;
 }
@@ -78,7 +74,7 @@ body{
     margin-top: 15%;
     margin-left: 30%;
     margin-right: 20%;
-    height: 50%;
+    height: auto;
     background-color: #0c192c;
     border-radius: 15%;
     color:   #f8f9fa;
@@ -101,14 +97,18 @@ body{
 
 
 #l1 img{
-    width: 70%;
+    width: 18%;
 }
 
 #l2 img{
-    width: 50%;
+    width: 20%;
 }
 #l3 img{
-    width: 32%;
+    width: 18%;
+}
+
+#l4 img{
+    width: 18%;
 }
 
 #selfie{
@@ -168,11 +168,21 @@ body{
   }
 
 #emojis{
-    width: 40%;
-    height: 60%;
-    display: inline-block;
+    height: auto;
+    display: inline;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
 }
 
+#emojis ul li{
+    display: inline;
+}
+
+#emojis ul li img{
+    margin-bottom: 8%;
+}
 
 
 
@@ -258,6 +268,7 @@ body{
   .row{
     position: absolute;
     bottom: 0px;
+    width: 100%;
   }
 
 
@@ -273,6 +284,13 @@ body{
     }
     #about-me{
         margin: auto;
+        margin-bottom: 3%;
+    }
+    #selfie{
+        margin-top: 3%;
+    }
+    .column{
+        width: 20%;
     }
 }
 
