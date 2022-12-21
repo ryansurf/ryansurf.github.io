@@ -71,7 +71,7 @@ body{
 
 
 #about-me {
-    margin-top: 15%;
+    margin-top: 10%;
     margin-left: 30%;
     margin-right: 20%;
     height: auto;
@@ -109,6 +109,22 @@ body{
 
 #l4 img{
     width: 18%;
+}
+
+#l5 img{
+    width: 12%;
+}
+
+#projects{
+    margin-left: 30%;
+    margin-right: 20%;
+    margin-top: 2%;
+    height: auto;
+    background-color: #0c192c;
+    border-radius: 15%;
+    color:   #f8f9fa;
+    overflow: hidden;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
 #selfie{
@@ -282,7 +298,7 @@ body{
         width: 80%;
         margin: auto;
     }
-    #about-me{
+    #about-me, #projects{
         margin: auto;
         margin-bottom: 3%;
     }
