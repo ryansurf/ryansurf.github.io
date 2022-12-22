@@ -26,7 +26,7 @@ body{
 
 .main{
     text-align: center;
-    width: 90;
+    width: 100vh;
     opacity: 0;
     display: none;
     transition: opacity 2s ease-in;
@@ -322,7 +322,6 @@ body{
     }
     
 }
-
 
 a:hover{
     cursor: pointer;
