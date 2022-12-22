@@ -20,7 +20,7 @@ function init(){
             }
          })();
         setTimeout(() => main.style.opacity = 1, 50);
-    }, 4000)
+    }, 2700)
 }
 
 init();
