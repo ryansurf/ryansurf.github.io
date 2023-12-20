@@ -1,0 +1,124 @@
+/* Will have to update this as i write more code
+Basically, copy contents of all other css files and add ".light-theme" to end */
+
+
+body.light-theme {
+    margin: 0;
+    background-color: var(--bg-color-light) !important;
+    color: var(--main-font-light);
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+}
+
+.content.light-theme {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1000px;
+}
+
+
+.nav-bar.light-theme {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-right: 30px;
+}
+
+.nav-menu.light-theme {
+    display: flex;
+    gap: 60px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    color: var(--main-font-light) !important;
+}
+
+.nav-item.light-theme {
+    display: flex;
+    float: left;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.nav-link.light-theme {
+    text-decoration: none;
+    color: var(--main-font-light) !important;
+    transition: 0.7s ease;
+    font-family: var(--font);
+    font-size: 25px;
+}
+
+.nav-link:hover.light-theme {
+    color: var(--secondary-font-light) !important;
+}
+
+.hamburger.light-theme {
+    display: none;
+    cursor: pointer;
+}
+
+.bar.light-theme {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: var(--main-font-light);
+}
+
+
+@media screen and (max-width: 500px) {
+    .nav-item.light-theme {
+        display: flex;
+    }
+    .hamburger.light-theme {
+        display: block;
+    }
+
+    .hamburger.light-theme.active .bar.light-theme:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.light-theme.active .bar.light-theme:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.light-theme.active .bar.light-theme:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav-bar.light-theme {
+        justify-content: center;
+        margin-right: 0;
+    }
+
+    .nav-menu.light-theme {
+        position: fixed;
+        left: -200%;
+        top: 70px;
+        gap: 0;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+    }
+
+    .nav-item.light-theme {
+        margin: 16px 0;
+        justify-content: center;
+    }
+
+    .svg-sun.active {
+        fill:  var(--main-font);
+    }
+    
+    .svg-moon.active {
+        fill: var(--main-font-light);
+    }
+
+    .nav-menu.light-theme.active {
+        left: 0;
+    }
+}

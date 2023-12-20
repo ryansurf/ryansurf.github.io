@@ -1,0 +1,21 @@
+
+
+:root {
+    --font: 'Inter', sans-serif;
+
+    --bg-color: #1b1c1f;
+    --main-font: #f7ffff;
+    --secondary-font: #f99538;
+
+    --bg-color-light: #ffffff;
+    --main-font-light: #5f4b9c;
+    --secondary-font-light: #ff507e;
+
+    --bg-color: #283618;
+    --main-font: #fefae0;
+    --secondary-font: #dda15e;
+
+    --bg-color-light: #c1121f;
+    --main-font-light: #003049;
+    --secondary-font-light: #669bbc;
+}
