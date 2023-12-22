@@ -52,6 +52,7 @@
 
     .nav-menu.active {
         left: 0;
+        -webkit-backdrop-filter: blur(7px);
         backdrop-filter: blur(7px);
         height: 100vh;
         z-index: 100;
