@@ -128,7 +128,7 @@ svg {
     display: flex;
     flex-direction: column;
     padding-bottom: 20%;
-    overflow: hidden;
+    overflow: visible;
 }
 
 .skills {
@@ -179,7 +179,6 @@ svg {
 }
 
 footer {
-    height: 50px;
     flex-shrink: 0;
     padding-left: 30px;
     padding-right: 30px;
