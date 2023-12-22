@@ -1,327 +1,116 @@
 
-/* The CSS universal selector(*), used to select all items in an HTML file */
-html{
-    scroll-behavior: smooth;
+body{
+    margin: 0;
+    background-color: var(--bg-color);
+    color: var(--main-font);
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
 }
 
-* {
-    box-sizing: border-box;
+
+.content {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    height: 92vh;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+
+.nav-bar {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-right: 30px;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 60px;
+    list-style: none;
     margin: 0;
     padding: 0;
+    color: var(--main-font);
 }
 
-body{
-    font-family: 'Lato', sans-serif;
-    font-size: 18px;
-    line-height: 1.6;
-    /* for gradient effect  */
-    background-color: #0c192c;
+.nav-item {
     display: flex;
     align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    min-height: 100vh;
-    color: white;
-}
-
-.main{
-    text-align: center;
-    opacity: 0;
-    display: none;
-    transition: opacity 2s ease-in;
-}
-
-
-#welcome-screen{
-    font-size: 35px ;
-}
-
-#welcome-screen img{
-    width: 8%;
-}
-
-
-#div1{
-    min-height: 100vh;
-    padding: 20%;
-} 
-
-/* DIV 2 START  */
-#div2{
-    /* position: absolute; */
-    position: relative;
-    /* top: 100%; */
-    min-height: 100vh;
-    width: 100%;
-    text-align: center;
-    background-color:  #f8f9fa;
-    color: #0c192c;
-    display: flex;
-    overflow: hidden;
-}
-
-
-#about{
-    width: 70%;
-    height: auto;
-    background-color: #f8f9fa;
     float: left;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
-
-#about-me {
-    margin-top: 10%;
-    margin-left: 30%;
-    margin-right: 20%;
-    height: auto;
-    background-color: #0c192c;
-    border-radius: 15%;
-    color:   #f8f9fa;
-    overflow: hidden;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+svg {
+    fill: var(--main-font);
 }
 
-
-#about-me h1{ 
-    margin-top: 5%;
+.svg-sun {
+    fill:  var(--main-font);
 }
 
-#about-me h2{
-    margin: 1%;
+.svg-moon {
+    fill: var(--main-font-light);
 }
 
-#about-me ul{
-    list-style: none;
-}
-
-
-#l1 img{
-    width: 18%;
-}
-
-#l2 img{
-    width: 20%;
-}
-#l3 img{
-    width: 18%;
-}
-
-#l4 img{
-    width: 18%;
-}
-
-#l5 img{
-    width: 12%;
-}
-
-#projects{
-    margin-left: 30%;
-    margin-right: 20%;
-    margin-top: 2%;
-    height: auto;
-    background-color: #0c192c;
-    border-radius: 15%;
-    color:   #f8f9fa;
-    overflow: hidden;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-}
-
-#projects ul{
-    list-style: none;
-}
-
-#selfie{
-    text-align: center;
-    width: 20%;
-    margin: 0;
-    margin-left: 10%;
-    margin-top: 8%;
-    float: left;
-    font-size: 1.3vw;
-}
-
-#selfie p{
-    font-size: 1.2vw;
-    color: rgb(73, 72, 72);
-}
-
-#selfie h3{
-    color: rgb(73, 72, 72);
-    font-size: 1.5vw;;
-}
-
-#selfie img{
-    display: block;
-    margin: 0;
-    width: 100%;
-    border-radius: 50%;
-    float: left;
-}
-
-#selfie ul{
-    list-style: none;
-}
-
-#selfie ul li{ 
-    display: inline;
-}
-
-
-.button {
-    background-color: #0c192c;
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    margin: 1%;
-    text-align: center;
+.nav-link {
     text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-    border-radius: 15%;
-  }
-
-.button:hover {
-    background-color: #2abcf1;
-    color: white;
-  }
-
-#emojis{
-    height: auto;
-    display: inline;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    margin: auto;
+    color: var(--main-font);
+    transition: 0.7s ease;
+    font-family: var(--font);
+    font-size: 25px;
 }
 
-#emojis ul li{
-    display: inline;
+.nav-link:hover {
+    color: var(--secondary-font);
 }
 
-#emojis ul li img{
-    margin-bottom: 8%;
-}
-
-
-
-/* DIV 2 END  */
-
-#div3{
-    position: relative;
-    min-height: 100vh;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-
-#skills{
-    width: 100%;
-    text-align: center;
-    margin-top: 5%;
-}
-
-.no-scroll{
-    overflow: hidden;
-}
-
-.imgContainer{
-    float: left;
-    padding: 1%;
-}
-
-
-/* DIV 3 END  */
-#cs-images{
-    height: 100%;
-    margin-top: 4%;
-}
-
-#skills{
-    height: 70%;
-    width: 100%;
-}
-
-#skills h1{
-    font-size: 250%;
-}
-
-
-
-.top-row ul{
-    list-style: none;
-    margin-bottom: 2%;
-}
-
-.top-row ul li{
-    display:inline;
-    margin: 4%;
-    display: inline;
-    list-style: none;
-}
-
-
-.top-row ul li img:hover{
-    filter: brightness(120%);
-}
-
-
-.bottom-row ul li img{
-    margin: 0;
-    padding: 0;
-}
-
-
-.bottom-row{
-    position: relative;
-    bottom: 0px;
-    width: 100%;
-}
-.bottom-row ul{
-    list-style: none;
-}
-
-.bottom-row ul li{
-    display:inline;
-    margin: 2%;
-    display: inline;
-    list-style: none;
-}
-
-.bottom-row ul li img{
-    margin: 0;
-    padding: 0;
-}
-
-  /* STACK DIVS ON MOBILE */
-@media all and (max-width:800px) 
-{
-    #about, #selfie
-    {
-        display: block; 
-        float: none; 
-        width: 80%;
-        margin: auto;
-    }
-    #about-me, #projects{
-        margin: auto;
-        margin-bottom: 3%;
-    }
-    #selfie{
-        margin-top: 3%;
-    }
-    .bottom-row img{
-        width: 12%;
-    }
-    .bottom-row ul li{
-        margin: 3%;
-    }
-    #cs-images{
-        margin-bottom: 15%;
-    }
-    
-}
-
-a:hover{
+.hamburger {
+    display: none;
     cursor: pointer;
 }
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: var(--main-font);
+}
+
+
+.social-media-icons {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    gap: 35px;
+}
+
+
+.social-media-icons li {
+    display: inline;
+}
+
+.social-media-icons li i{
+    font-size: 40px;
+}
+
+footer {
+    height: 50px;
+    flex-shrink: 0;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .copyright {
+    display: flex;
+    justify-content: center;
+    font-size: 12px;
+  }

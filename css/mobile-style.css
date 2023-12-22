@@ -1,5 +1,6 @@
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 580px) {
+
     .nav-item {
         display: flex;
     }
@@ -51,5 +52,16 @@
 
     .nav-menu.active {
         left: 0;
+        backdrop-filter: blur(7px);
+    }
+}
+
+@media screen and (max-width: 290px) {
+    .social-media-icons {
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    .social-media-icons li i{
+        font-size: 25vw;
     }
 }
