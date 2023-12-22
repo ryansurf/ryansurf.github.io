@@ -7,6 +7,10 @@ body{
     font-size: 12px;
 }
 
+a {
+    color: inherit; /* blue colors for links too */
+    text-decoration: inherit; /* no underline */
+  }
 
 .content {
     margin-left: auto;
@@ -14,9 +18,10 @@ body{
     max-width: 1000px;
     display: flex;
     flex-direction: column;
-    height: 92vh;
+    height: 100vh;
     padding-left: 30px;
     padding-right: 30px;
+    overflow: auto;
 }
 
 
@@ -89,7 +94,7 @@ svg {
     list-style: none;
     display: flex;
     justify-content: center;
-    padding: 0;
+    padding: 10px 0;
     gap: 35px;
 }
 
@@ -98,8 +103,79 @@ svg {
     display: inline;
 }
 
+
+.social-media-icons li i:hover {
+    font-size: 50px;
+    transition-duration: 0.4s;
+}
+
 .social-media-icons li i{
     font-size: 40px;
+}
+
+.about-me {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 20%;
+    padding-left: 15%;
+}
+
+.about-bio {
+    height: 100%;
+    margin: 15px;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20%;
+    overflow: hidden;
+}
+
+.skills {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    gap: 5px;
+    font-size: 1.5em;
+    flex-wrap: wrap;
+}
+
+
+.skills li {
+    display: inline;
+}
+
+
+.skills li i:hover {
+    font-size: 50px;
+    transition-duration: 0.4s;
+}
+
+.skills li i{
+    font-size: 30px;
+}
+
+.skills-h1 {
+    border-bottom: none;
+}
+
+.about-bio-h1 {
+    font-size: 3em;
+    font-weight: 900;
+    padding-bottom: 15px;
+    border-bottom: 1px solid lightgray;
+}
+
+.about-bio p {
+    font-size: 1.5em;
+    filter: brightness(90%);
+
+}
+
+.about-bio a {
+    color: var(--secondary-font);
+    text-decoration: underline;
 }
 
 footer {
@@ -113,4 +189,73 @@ footer {
     display: flex;
     justify-content: center;
     font-size: 12px;
+    padding-bottom: 5px;
   }
+
+.about-me h1 {
+    font-size: 3em;
+    margin: 10px 0;
+}
+
+.about-me h2 {
+    font-size: 2em;
+    margin: 10px 0;
+}
+
+.about-me h3 {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.fancy-about {
+    background-image: linear-gradient(45deg, var(--special-text), var(--secondary-font));
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
+}
+
+.fancy-me {
+    background-image: linear-gradient(45deg, var(--secondary-font), var(--special-text));
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
+}
+
+.skills-item  {
+    padding: 3px 14px;
+    border-radius: 7px;
+}
+
+#python {
+    background-color: darkred
+}
+
+#C {
+    background-color: green;
+}
+
+#js {
+    background-color: darkolivegreen
+}
+
+#react {
+    background-color: purple
+}
+
+#sql {
+    background-color: blue
+}
+#wireshark {
+    background-color: black
+}
+#git {
+    background-color: darkorange
+}
+#bash {
+    background-color: darkkhaki
+}
+

@@ -53,6 +53,22 @@
     .nav-menu.active {
         left: 0;
         backdrop-filter: blur(7px);
+        height: 100vh;
+        z-index: 100;
+    }
+    .about-me {
+        padding: 0;
+    }
+    .about-me h1 {
+        text-align: center;
+    }
+    
+    .about-me h2 {
+        text-align: center;
+    }
+    
+    .about-me h3 {
+        text-align: center;
     }
 }
 
@@ -63,5 +79,8 @@
     }
     .social-media-icons li i{
         font-size: 25vw;
+    }
+    .copyright {
+        display: none;
     }
 }

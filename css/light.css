@@ -1,19 +1,26 @@
-/* Will have to update this as i write more code
-Basically, copy contents of all other css files and add ".light-theme" to end */
 
-
-body.light-theme {
+body.light-theme{
     margin: 0;
-    background-color: var(--bg-color-light) !important;
+    background-color: var(--bg-color-light);
     color: var(--main-font-light);
     font-family: 'Inter', sans-serif;
     font-size: 12px;
 }
 
+a.light-theme {
+    color: inherit; /* blue colors for links too */
+    text-decoration: inherit; /* no underline */
+  }
+
 .content.light-theme {
     margin-left: auto;
     margin-right: auto;
     max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
 
@@ -31,26 +38,39 @@ body.light-theme {
     list-style: none;
     margin: 0;
     padding: 0;
-    color: var(--main-font-light) !important;
+    color: var(--main-font-light);
 }
 
 .nav-item.light-theme {
     display: flex;
+    align-items: center;
     float: left;
     padding-top: 15px;
     padding-bottom: 15px;
 }
 
+svg.light-theme {
+    fill: var(--main-font-light);
+}
+
+.svg-sun.light-theme {
+    fill:  var(--main-font-light);
+}
+
+.svg-moon.light-theme {
+    fill: var(--main-font-light);
+}
+
 .nav-link.light-theme {
     text-decoration: none;
-    color: var(--main-font-light) !important;
+    color: var(--main-font-light);
     transition: 0.7s ease;
     font-family: var(--font);
     font-size: 25px;
 }
 
-.nav-link:hover.light-theme {
-    color: var(--secondary-font-light) !important;
+.nav-link.light-theme:hover {
+    color: var(--secondary-font-light);
 }
 
 .hamburger.light-theme {
@@ -69,7 +89,114 @@ body.light-theme {
 }
 
 
-@media screen and (max-width: 500px) {
+.social-media-icons.light-theme {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    gap: 35px;
+}
+
+
+.social-media-icons.light-theme li {
+    display: inline;
+}
+
+
+.social-media-icons.light-theme li i:hover {
+    font-size: 50px;
+    transition-duration: 0.4s;
+}
+
+.social-media-icons.light-theme li i{
+    font-size: 40px;
+}
+
+.about-me.light-theme {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 20%;
+    padding-left: 15%;
+}
+
+.about-bio.light-theme {
+    height: 100%;
+    margin: 15px;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20%;
+}
+
+.about-bio.light-theme h1 {
+    font-size: 3em;
+    font-weight: 900;
+    padding-bottom: 15px;
+    border-bottom: 1px solid lightgray;
+}
+
+.about-bio.light-theme p {
+    font-size: 1.5em;
+    filter: brightness(90%);
+
+}
+
+.about-bio.light-theme a {
+    color: var(--secondary-font-light);
+    text-decoration: underline;
+}
+
+footer.light-theme {
+    height: 50px;
+    flex-shrink: 0;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .copyright.light-theme {
+    display: flex;
+    justify-content: center;
+    font-size: 12px;
+    padding-bottom: 5px;
+  }
+
+.about-me.light-theme h1 {
+    font-size: 3em;
+    margin: 10px 0;
+}
+
+.about-me.light-theme h2 {
+    font-size: 2em;
+    margin: 10px 0;
+}
+
+.about-me.light-theme h3 {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.fancy-about.light-theme {
+    background-image: linear-gradient(45deg, var(--special-text-light), var(--secondary-font-light));
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
+}
+
+.fancy-me.light-theme {
+    background-image: linear-gradient(45deg, var(--secondary-font-light), var(--special-text-light));
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
+}
+
+
+@media screen and (max-width: 580px) {
+
     .nav-item.light-theme {
         display: flex;
     }
@@ -77,15 +204,15 @@ body.light-theme {
         display: block;
     }
 
-    .hamburger.light-theme.active .bar.light-theme:nth-child(2) {
+    .hamburger.light-theme.active .bar:nth-child(2) {
         opacity: 0;
     }
 
-    .hamburger.light-theme.active .bar.light-theme:nth-child(1) {
+    .hamburger.light-theme.active .bar:nth-child(1) {
         transform: translateY(8px) rotate(45deg);
     }
 
-    .hamburger.light-theme.active .bar.light-theme:nth-child(3) {
+    .hamburger.light-theme.active .bar:nth-child(3) {
         transform: translateY(-8px) rotate(-45deg);
     }
 
@@ -110,15 +237,49 @@ body.light-theme {
         justify-content: center;
     }
 
-    .svg-sun.active {
-        fill:  var(--main-font);
+    .svg-sun.light-theme {
+        fill:  var(--main-font-light);
     }
     
-    .svg-moon.active {
+    .svg-moon.light-theme{
         fill: var(--main-font-light);
     }
 
+
     .nav-menu.light-theme.active {
         left: 0;
+        backdrop-filter: blur(7px);
+        height: 100vh;;
     }
+    .about-me.light-theme {
+        padding: 0;
+    }
+    .about-me.light-theme h1 {
+        text-align: center;
+    }
+    
+    .about-me.light-theme h2 {
+        text-align: center;
+    }
+    
+    .about-me.light-theme h3 {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 290px) {
+    .social-media-icons.light-theme {
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    .social-media-icons.light-theme li i{
+        font-size: 25vw;
+    }
+    .copyright.light-theme {
+        display: none;
+    }
+}
+
+.skills-item.light-theme {
+    color: var(--bg-color-light);
 }

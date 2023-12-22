@@ -1,4 +1,35 @@
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // below code changes the color theme and the sun/moon SVG.
 //also does hamburger menu logic 
 let isOriginalState = true;
