@@ -129,6 +129,13 @@ svg {
     overflow: visible;
 }
 
+.about-bio h1 {
+    font-size: 3em;
+    font-weight: 900;
+    padding-bottom: 15px;
+    border-bottom: 1px solid lightgray;
+}
+
 .skills {
     list-style: none;
     display: flex;
