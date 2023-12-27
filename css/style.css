@@ -18,7 +18,7 @@ a {
     max-width: 1000px;
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    min-height: 100vh;
     padding-left: 30px;
     padding-right: 30px;
     overflow: auto;
@@ -114,8 +114,8 @@ svg {
 }
 
 .about-me {
-    height: 100%;
     display: flex;
+    flex: 1;
     flex-direction: column;
     justify-content: center;
     padding-bottom: 20%;
@@ -123,11 +123,9 @@ svg {
 }
 
 .about-bio {
-    height: 100%;
-    margin: 15px;
     display: flex;
+    flex: 1;
     flex-direction: column;
-    padding-bottom: 20%;
     overflow: visible;
 }
 
