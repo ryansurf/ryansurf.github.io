@@ -149,6 +149,8 @@ svg {
 
 .skills li {
     display: inline;
+    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+    font-weight: bold;
 }
 
 
@@ -220,6 +222,10 @@ footer {
     -moz-text-fill-color: transparent;
 }
 
+.fancy-about:hover, .fancy-me:hover {
+    filter: invert(1);
+}
+
 .fancy-me {
     background-image: linear-gradient(45deg, var(--secondary-font), var(--special-text));
     background-size: 100%;
@@ -235,31 +241,34 @@ footer {
 }
 
 #python {
-    background-color: darkred
+    background-color: #6A00FF;
 }
 
 #C {
-    background-color: green;
+    background-color: #FF00FF;
 }
 
 #js {
-    background-color: darkolivegreen
+    background-color: #FF0040;
 }
-
+#html {
+    background-color: #FF9500;
+}
 #react {
-    background-color: purple
+    background-color: #FFFF00;
 }
 
 #sql {
-    background-color: blue
+    background-color: #AAFF00;
 }
-#wireshark {
-    background-color: black
+#networking {
+    background-color: #00FF15;
 }
 #git {
-    background-color: darkorange
+    background-color: #00FFFF;
 }
 #bash {
-    background-color: darkkhaki
+    background-color: #0095FF;
 }
+
 
