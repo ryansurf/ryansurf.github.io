@@ -282,3 +282,8 @@ footer.light-theme {
     color: var(--bg-color-light);
     background-color: var(--secondary-font-light);
 }
+
+.skills-item.light-theme:hover {
+    transition: 0.3s;
+    background-color: var(--special-text-light);
+}

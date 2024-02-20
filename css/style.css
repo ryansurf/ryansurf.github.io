@@ -241,6 +241,11 @@ footer {
     background-color: var(--secondary-font);
 }
 
+.skills-item:hover {
+    transition: 0.3s;
+    background-color: var(--special-text);
+}
+
 /* #python {
     background-color: #6A00FF;
 }
