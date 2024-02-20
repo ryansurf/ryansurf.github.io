@@ -238,9 +238,10 @@ footer {
 .skills-item  {
     padding: 3px 14px;
     border-radius: 7px;
+    background-color: var(--secondary-font);
 }
 
-#python {
+/* #python {
     background-color: #6A00FF;
 }
 
@@ -269,6 +270,6 @@ footer {
 }
 #bash {
     background-color: #0095FF;
-}
+} */
 
 
