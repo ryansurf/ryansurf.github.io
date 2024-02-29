@@ -58,6 +58,15 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     ));
 
+    // button click audio for light/dark 
+    const color_toggle = document.querySelector("#svgNav");
+    const audio = new Audio();
+    audio.src = "./audio/button.mp3";
+
+    color_toggle.addEventListener("click", () => {
+        audio.play();
+    });
+
 
 });
 
