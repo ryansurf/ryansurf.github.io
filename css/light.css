@@ -104,8 +104,9 @@ svg.light-theme {
 
 
 .social-media-icons.light-theme li i:hover {
-    font-size: 50px;
-    transition-duration: 0.4s;
+    transform: scale(1.2);
+    transition-duration: 0.3s;
+    color: var(--secondary-font-light);
 }
 
 .social-media-icons.light-theme li i{
