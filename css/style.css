@@ -181,7 +181,7 @@ svg {
 
 }
 
-.about-bio a {
+.about-link {
     color: var(--secondary-font);
     text-decoration: underline;
 }
@@ -245,5 +245,38 @@ footer {
 .skills-item:hover {
     transition: 0.3s;
     background-color: var(--special-text);
+}
+
+.selfie {
+    width: 250px;
+    border-radius: 25%;
+    padding-left: 20px;
+}
+
+.image-bio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.email {
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 18px;
+}
+
+.about-button {
+    background-color: var(--bg-color);
+    border: none;
+    color: var(--main-font);
+    font-family: inherit;
+    font-size: inherit;
+    padding: 15px;
+    border-radius: 20%;
+
+}
+
+.about-button:hover {
+    text-decoration:underline;
 }
 

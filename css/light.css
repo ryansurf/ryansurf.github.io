@@ -141,7 +141,7 @@ svg.light-theme {
 
 }
 
-.about-bio.light-theme a {
+.about-link.light-theme {
     color: var(--secondary-font-light);
     text-decoration: underline;
 }
@@ -287,4 +287,15 @@ footer.light-theme {
 .skills-item.light-theme:hover {
     transition: 0.3s;
     background-color: var(--special-text-light);
+}
+
+.about-button.light-theme {
+    background-color: var(--bg-color-light);
+    border: none;
+    color: var(--main-font-light);
+    font-family: inherit;
+    font-size: inherit;
+    padding: 15px;
+    border-radius: 20%;
+
 }

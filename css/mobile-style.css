@@ -71,6 +71,14 @@
     .about-me h3 {
         text-align: center;
     }
+
+    .image-bio {
+        flex-direction: column;
+    }
+
+    .selfie {
+        padding-left: 0px;
+    }
 }
 
 @media screen and (max-width: 290px) {
@@ -82,6 +90,12 @@
         font-size: 25vw;
     }
     .copyright {
+        display: none;
+    }
+    .selfie {
+        display: none;
+    }
+    .about-button {
         display: none;
     }
 }
