@@ -78,6 +78,7 @@
 
     .selfie {
         padding-left: 0px;
+        order: -1;
     }
 }
 
