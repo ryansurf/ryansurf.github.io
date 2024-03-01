@@ -26,7 +26,7 @@ a.light-theme {
 
 .nav-bar.light-theme {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     margin-top: 30px;
     margin-bottom: 30px;
     margin-right: 30px;
@@ -50,7 +50,7 @@ a.light-theme {
 }
 
 svg.light-theme {
-    fill: var(--main-font-light);
+    fill: var(--main-font-light) !important;
 }
 
 .svg-sun.light-theme {
@@ -219,6 +219,10 @@ footer.light-theme {
         margin-right: 0;
     }
 
+    .nav-bar-play.light-theme {
+        display: none !important;
+    }
+
     .nav-menu.light-theme {
         position: fixed;
         left: -200%;
@@ -290,7 +294,7 @@ footer.light-theme {
 }
 
 .about-button.light-theme {
-    background-color: var(--bg-color-light);
+    background-color: transparent;
     border: none;
     color: var(--main-font-light);
     font-family: inherit;
@@ -298,4 +302,11 @@ footer.light-theme {
     padding: 15px;
     border-radius: 20%;
 
+}
+
+.nav-bar-play.light-theme {
+    fill: var(--main-font);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
