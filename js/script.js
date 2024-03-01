@@ -35,6 +35,12 @@ function toggleSVG() {
 }
 
 function trippyButton() {
+    // Pause/play button vars 
+    const altPlayButtonSVG = playButtonSVG;
+    const altPauseButtonSVG = pauseButtonSVG;
+    const svgContainer = document.getElementById('svgPlayID');
+    const svgContainerMobile = document.getElementById('svgPlayIDMobile');
+
     // button click audio for light/dark 
     const color_toggle = document.querySelector("#svgNav");
     const audio = new Audio();
@@ -59,9 +65,13 @@ function trippyButton() {
         if (isTrippyOn) {
             trippy_audio.play();
             trippy_background.style.backgroundImage = "url('../images/trippy.gif')";
+            svgContainer.innerHTML = altPauseButtonSVG;
+            svgContainerMobile.innerHTML = altPauseButtonSVG;
         } else {
             trippy_audio.pause();
             trippy_background.style.backgroundImage = "none";
+            svgContainer.innerHTML = altPlayButtonSVG;
+            svgContainerMobile.innerHTML = altPlayButtonSVG;
         }
     }
 
@@ -111,6 +121,10 @@ function switch_theme() {
     document.body.classList.toggle('light-theme');
         document.body.querySelectorAll('*').forEach(div => {
             div.classList.toggle('light-theme');
+        });
+        // Toggle classes for all SVG elements
+        document.body.querySelectorAll('svg').forEach(svg => {
+            svg.classList.toggle('light-theme');
         });
     toggleSVG();
 }

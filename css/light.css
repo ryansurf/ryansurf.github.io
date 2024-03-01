@@ -50,7 +50,7 @@ a.light-theme {
 }
 
 svg.light-theme {
-    fill: var(--main-font-light) !important;
+    fill: var(--main-font-light);
 }
 
 .svg-sun.light-theme {
@@ -309,4 +309,25 @@ footer.light-theme {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.nav-bar-svg.light-theme {
+    fill: var(--main-font-light);
+}
+
+.nav-bar-play.light-theme {
+    svg {
+        fill: var(--main-font-light);
+    }
+}
+
+.nav-bar-play-mobile.light-theme {
+    svg {
+        fill: var(--main-font-light);
+    }
+}
+
+.nav-bar-play.light-theme {
+    fill: var(--main-font-light);
+
 }
