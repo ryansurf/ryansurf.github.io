@@ -25,7 +25,7 @@ const playButtonSVG = `
 
 const pauseButtonSVG = `
     <svg  
-        width="35px" viewBox="0 0 332.145 332.146">
+        width="25px" viewBox="0 0 332.145 332.146">
         <g>
             <g>
                 <path d="M121.114,0H25.558c-8.017,0-14.517,6.5-14.517,14.515v303.114c0,8.017,6.5,14.517,14.517,14.517h95.556
