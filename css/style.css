@@ -272,6 +272,7 @@ footer {
     font-size: inherit;
     padding: 15px;
     border-radius: 20%;
+    cursor: pointer;
 
 }
 
