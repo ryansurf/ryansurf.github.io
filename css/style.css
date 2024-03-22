@@ -276,6 +276,10 @@ footer {
     padding: 15px;
     border-radius: 20%;
     cursor: pointer;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/master
 }
 
 .about-button:hover {
@@ -284,6 +288,7 @@ footer {
 
 .nav-bar-play {
     fill: var(--main-font);
+    height: fit-content;
     display: flex;
     height: fit-content;
     justify-content: center;
