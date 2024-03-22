@@ -146,6 +146,10 @@ svg.light-theme {
     text-decoration: underline;
 }
 
+.about-link.light-theme:hover {
+    color: var(--special-text-light);
+}
+
 footer.light-theme {
     flex-shrink: 0;
     padding-left: 30px;

@@ -30,6 +30,7 @@ a {
 .nav-bar {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin-top: 30px;
     margin-bottom: 30px;
     margin-right: 30px;
@@ -183,6 +184,9 @@ a {
     color: var(--secondary-font);
     text-decoration: underline;
 }
+.about-link:hover {
+    color: var(--special-text);
+}
 
 footer {
     flex-shrink: 0;
@@ -271,7 +275,7 @@ footer {
     font-size: inherit;
     padding: 15px;
     border-radius: 20%;
-
+    cursor: pointer;
 }
 
 .about-button:hover {
@@ -281,8 +285,10 @@ footer {
 .nav-bar-play {
     fill: var(--main-font);
     display: flex;
+    height: fit-content;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 
 .nav-bar-svg {
