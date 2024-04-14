@@ -6,13 +6,7 @@
 
 ## Installation
 
-To run locally, clone my repo
-
-```bash
-git clone https://github.com/ryansurf/ryansurf.github.io.git
-```
-And run. I use Visual Studio Code's [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) extension.
-
+I use Visual Studio Code's [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) extension to run locally.
 
 ## Contributing
 
