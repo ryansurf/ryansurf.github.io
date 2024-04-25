@@ -8,9 +8,12 @@
     --secondary-font: #f99538;
     --special-text: #3845f9;
 
-    --bg-color-light: #ffffff;
+    /* --bg-color-light: #ffffff;
     --main-font-light: #5f4b9c;
     --secondary-font-light: #ff507e;
-    --special-text-light: #ce52ce;
-
+    --special-text-light: #ce52ce; */
+    --bg-color-light: #FFFAFF;
+    --main-font-light: #0A2463;
+    --secondary-font-light: #D8315B;
+    --special-text-light: #3E92CC;
 }
