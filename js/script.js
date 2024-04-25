@@ -55,7 +55,7 @@ function trippyButton() {
     const trippy_toggle_mobile = document.querySelector(".nav-bar-play-mobile");
     const trippy_background = document.querySelector("body");
     const trippy_audio = new Audio();
-    trippy_audio.src = "./audio/burbank.m4a";
+    trippy_audio.src = "./audio/burbank.mp3";
 
     let isTrippyOn = localStorage.getItem('isTrippyOn') === 'true'; // Retrieve from localStorage
     updateTrippyState(); // Call the function to set the initial state
