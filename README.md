@@ -2,8 +2,6 @@
 
 [A personal website!](https://ryansurf.github.io/) Made with vanilla JavaScript, HTML and CSS. You can see my skills, GitHub, LinkedIn and Email, plus a little about me.
 
-![image](/images/portfolio_ss.PNG)
-
 ## Installation
 
 I use Visual Studio Code's [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) extension to run locally.
