@@ -3,12 +3,14 @@
 
 <head>
     <title>Ryan Frederich</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌊</text></svg>">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/variables.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;900&family=JetBrains+Mono:wght@400;600&display=swap">
     <script src="https://kit.fontawesome.com/83640c69a1.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 
 <body>
@@ -24,11 +26,18 @@
         </button>
     </div>
 
+    <!-- ── Tab nav ── -->
+
+    <nav class="tab-nav">
+        <button class="tab-btn active" data-tab="home">Home</button>
+        <button class="tab-btn" data-tab="about">About</button>
+    </nav>
+
     <!-- ── Portfolio content ── -->
 
-    <section id="home" class="hero">
+    <section id="home" class="tab-panel hero active">
         <div class="hero-content">
-            <h1>Hi, I'm Ryan</h1>
+            <h1>Hi, I'm <span class="name-3d">Ryan</span></h1>
             <h2>Software Engineer</h2>
             <div class="social-links">
                 <a href="http://www.linkedin.com/in/ryanfreder" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
@@ -38,37 +47,11 @@
         </div>
     </section>
 
-    <section id="about" class="about">
-        <h2 class="section-label">About</h2>
+    <section id="about" class="tab-panel about">
         <div class="about-content">
-            <div class="bio">
-                <p>I'm a recent graduate from the University of California, Santa Cruz with a degree in
-                    <a class="about-link" href="https://engineering.ucsc.edu/departments/technology-and-information-manangement/">Technology and Information Management</a>
-                    and a minor in Computer Science.
-                </p>
-                <p>My interests are in networking, automation, and web development.</p>
-                <p>Previously a Web Development intern at <a class="about-link" href="https://www.callawaygolf.com/">Callaway Golf</a>,
-                    working on the <a class="about-link" href="https://www.travismathew.com/">Travis Mathew</a> eCommerce platform.
-                </p>
-                <p>Outside of work I enjoy surfing, camping, traveling, and reading.</p>
-            </div>
+            <div class="bio" id="about-bio"></div>
             <img class="selfie" src="./images/selfie.jpg" alt="Ryan Frederich"/>
         </div>
-
-        <h3 class="section-label">Skills</h3>
-        <ul class="skills">
-            <li>Python</li>
-            <li>C/C++</li>
-            <li>JavaScript</li>
-            <li>HTML/CSS</li>
-            <li>React</li>
-            <li>SQL</li>
-            <li>Networking</li>
-            <li>Git</li>
-            <li>Bash</li>
-        </ul>
-
-        <a href="/resume.pdf" class="resume-btn">View Resume</a>
     </section>
 
     <footer>
@@ -94,6 +77,23 @@
         </div>
     </div>
 
+    <script>
+        fetch('about.md')
+            .then(r => r.text())
+            .then(text => {
+                document.getElementById('about-bio').innerHTML = marked.parse(text);
+            });
+    </script>
+    <script>
+        document.querySelectorAll('.tab-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+                document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+                btn.classList.add('active');
+                document.getElementById(btn.dataset.tab).classList.add('active');
+            });
+        });
+    </script>
     <script src="js/terminal.js"></script>
     <script src="js/colorscheme.js"></script>
     <script src="js/binary.js"></script>
