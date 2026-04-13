@@ -4,6 +4,11 @@
     padding: 0;
 }
 
+html, body {
+    height: 100%;
+    overflow: hidden;
+}
+
 body {
     background-color: var(--bg-color);
     transition: background-color 0.4s ease;
@@ -17,6 +22,63 @@ a {
     text-decoration: none;
 }
 
+/* ── Tabs ──────────────────────────────────────────── */
+
+.tab-nav {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 4px;
+    background: rgba(247, 255, 255, 0.05);
+    border: 1px solid rgba(247, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 4px;
+    z-index: 300;
+}
+
+.tab-btn {
+    background: transparent;
+    border: none;
+    color: var(--main-font);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.88rem;
+    font-weight: 500;
+    padding: 7px 20px;
+    border-radius: 7px;
+    cursor: pointer;
+    opacity: 0.45;
+    transition: opacity 0.2s, background 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.tab-btn::before {
+    content: '';
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--secondary-font);
+    opacity: 0;
+    transition: opacity 0.2s;
+    flex-shrink: 0;
+}
+
+.tab-btn.active {
+    background: rgba(247, 255, 255, 0.07);
+    opacity: 1;
+}
+
+.tab-btn.active::before {
+    opacity: 1;
+}
+
+.tab-btn:hover:not(.active) {
+    opacity: 0.75;
+}
+
 /* ── Hero ──────────────────────────────────────────── */
 
 .hero {
@@ -28,10 +90,32 @@ a {
     padding: 0 60px;
 }
 
+.hero-content {
+    animation: tab-fade-in 0.6s ease;
+}
+
 .hero-content h1 {
     font-size: 4rem;
     font-weight: 900;
     margin-bottom: 12px;
+}
+
+.name-3d {
+    display: inline-block;
+    text-shadow:
+        1px 1px 0   var(--secondary-font),
+        2px 2px 0   var(--secondary-font),
+        3px 3px 0   var(--secondary-font),
+        4px 4px 0   var(--secondary-font),
+        5px 5px 0   var(--secondary-font),
+        6px 6px 12px rgba(0, 0, 0, 0.5);
+    transform: perspective(300px) rotateX(8deg);
+    transition: text-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.name-3d:hover {
+    text-shadow: none;
+    transform: none;
 }
 
 .hero-content h2 {
@@ -55,14 +139,19 @@ a {
 .social-links a:hover {
     color: var(--secondary-font);
     transform: scale(1.15);
+    filter: drop-shadow(0 0 8px color-mix(in srgb, var(--secondary-font) 60%, transparent));
 }
 
 /* ── About ─────────────────────────────────────────── */
 
 .about {
+    height: 100vh;
     max-width: 820px;
     margin: 0 auto;
-    padding: 100px 60px 120px;
+    padding: 80px 60px 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .section-label {
@@ -71,79 +160,96 @@ a {
     letter-spacing: 0.22em;
     text-transform: uppercase;
     color: var(--secondary-font);
-    margin-bottom: 40px;
+    margin-bottom: 24px;
     text-align: center;
 }
 
 .about-content {
     display: flex;
     align-items: center;
-    gap: 56px;
-    margin-bottom: 72px;
+    gap: 48px;
+    margin-bottom: 32px;
 }
 
 .bio p {
-    font-size: 1.05rem;
-    line-height: 1.85;
-    margin-bottom: 16px;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 10px;
     opacity: 0.78;
 }
 
-.about-link {
+#about-bio h3 {
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--secondary-font);
+    margin-bottom: 8px;
+    margin-top: 32px;
+}
+
+#about-bio h3:first-child {
+    margin-top: 0;
+}
+
+#about-bio p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    opacity: 0.78;
+    margin-bottom: 6px;
+}
+
+#about-bio br {
+    display: none;
+}
+
+.about-link,
+#about-bio a {
     color: var(--secondary-font);
     text-decoration: underline;
 }
 
-.about-link:hover {
+.about-link:hover,
+#about-bio a:hover {
     color: var(--special-text);
 }
 
 .selfie {
-    width: 220px;
-    border-radius: 16px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
     flex-shrink: 0;
-    border: 2px solid var(--secondary-font);
-    box-shadow: 0 0 0 7px rgba(249, 149, 56, 0.12);
+    object-fit: cover;
+    object-position: center 95%;
+    border: 2.5px solid var(--secondary-font);
+    box-shadow: 0 0 0 6px color-mix(in srgb, var(--secondary-font) 15%, transparent);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.skills {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-    margin-bottom: 52px;
+.selfie:hover {
+    transform: scale(1.04);
+    box-shadow: 0 0 0 8px color-mix(in srgb, var(--secondary-font) 22%, transparent);
 }
 
-.skills li {
-    padding: 6px 18px;
-    border-radius: 20px;
-    border: 1.5px solid rgba(247, 255, 255, 0.2);
-    font-size: 0.9rem;
-    cursor: default;
-    transition: border-color 0.25s, color 0.25s;
+
+/* ── Tab panels (must come after section rules to win cascade) ── */
+
+.tab-panel {
+    display: none !important;
 }
 
-.skills li:hover {
-    border-color: var(--secondary-font);
-    color: var(--secondary-font);
+.tab-panel.active {
+    display: flex !important;
+    animation: tab-fade-in 0.3s ease;
 }
 
-.resume-btn {
-    display: block;
-    width: fit-content;
-    margin: 0 auto;
-    padding: 12px 30px;
-    border: 1.5px solid rgba(247, 255, 255, 0.3);
-    border-radius: 8px;
-    font-size: 0.95rem;
-    font-weight: 500;
-    transition: border-color 0.25s, color 0.25s;
+.tab-panel.hero.active {
+    display: flex !important;
 }
 
-.resume-btn:hover {
-    border-color: var(--secondary-font);
-    color: var(--secondary-font);
+@keyframes tab-fade-in {
+    from { opacity: 0; transform: translateY(8px); }
+    to   { opacity: 1; transform: translateY(0); }
 }
 
 /* ── Footer ────────────────────────────────────────── */
@@ -151,6 +257,7 @@ a {
 footer {
     text-align: center;
     padding: 24px;
+    display: none;
 }
 
 .copyright {
