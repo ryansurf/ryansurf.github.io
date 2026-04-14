@@ -492,6 +492,11 @@ footer {
 }
 
 @media (max-width: 600px) {
+    /* Push tab nav below the btn-group so they don't overlap */
+    .tab-nav {
+        top: 68px;
+    }
+
     .hero {
         padding: 0 28px;
     }
@@ -513,8 +518,12 @@ footer {
         font-size: 2.2rem;
     }
 
+    /* Allow about panel to scroll on mobile */
     .about {
-        padding: 60px 24px 80px;
+        padding: 130px 24px 100px;
+        height: 100vh;
+        overflow-y: auto;
+        justify-content: flex-start;
     }
 
     .section-label {
@@ -578,5 +587,14 @@ footer {
         top: 12px;
         right: 12px;
         gap: 6px;
+    }
+
+    /* Recalculate tab nav position for smaller btn-group top */
+    .tab-nav {
+        top: 60px;
+    }
+
+    .about {
+        padding-top: 115px;
     }
 }
